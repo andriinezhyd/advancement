@@ -3,11 +3,14 @@
 // Color names - http://name-of-color.com/
 
 $gray: #999;
-$black: #333;
+$black: #000;
 $white: #fff;
+$yellow: #ffce00;
+$green:#106d31;
 $light-blue: #39f;
+$light-gray: #bebdbb;
 
-$base-font-sans-serif: 'Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
+$base-font-sans-serif: 'Libre Franklin', 'Helvetica Neue', 'Helvetica', sans-serif;
 $base-font-serif: 'Times New Roman', 'Times', 'Baskerville', 'Georgia', serif;
 
 // Body
@@ -26,7 +29,7 @@ $base-link-color: $light-blue;
 
 // Buttons 
 $btn-color: $white !default;
-$btn-background: $black !default;
+$btn-background: $green !default;
 $btn-padding: 0.4em 0.7em !default;
 $btn-font-size: inherit !default;
 
@@ -34,7 +37,7 @@ $btn-font-size: inherit !default;
 $form-element-padding: $btn-padding !default;
 $form-element-border-color: $gray !default;
 $form-element-focus-border-color: $black !default;
-$placeholder-color: $gray !default;
+$placeholder-color: $light-gray !default;
 
 // Headers
 $h1-font-size: 30px !default;

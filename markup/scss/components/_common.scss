@@ -1,0 +1,21 @@
+.hidden {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.title-yellow {
+	display: inline-block;
+	color: $black;
+	padding: 7px 5px;
+	background: $yellow;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+.bg-black {
+	background-color: linear-gradient(to top, #fff, #000);
+}
