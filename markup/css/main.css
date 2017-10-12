@@ -354,7 +354,7 @@ td,
 th {
   padding: 0; }
 
-#header #nav .nav, #header #nav .nav .social, .slider-block .info .list-items, .pagination ul {
+#header #nav .nav, #header #nav .nav .social, .block-green .social-holder .social, .slider-block .info .list-items, .pagination ul {
   margin: 0;
   padding: 0;
   list-style: none; }
@@ -723,7 +723,7 @@ input[type='submit'] {
           transform: translateY(0); }
 
 .container {
-  max-width: 1160px;
+  max-width: 1230px;
   margin: 0 auto;
   padding: 0 15px; }
 
@@ -764,6 +764,89 @@ input[type='submit'] {
 .btn:hover {
   background: #ffce00;
   color: #fff; }
+
+.block-green {
+  text-align: center;
+  background: #106d31;
+  color: #fff;
+  padding: 32px 0; }
+  @media (min-width: 768px) {
+    .block-green {
+      text-align: left; } }
+  .block-green .title {
+    display: inline-block;
+    vertical-align: middle;
+    width: 300px;
+    font-size: 24px;
+    line-height: 1.28125;
+    margin-bottom: 20px;
+    margin-right: -3px; }
+    @media (min-width: 768px) {
+      .block-green .title {
+        font-size: 32px; } }
+  .block-green .signup-form {
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 20px; }
+    @media (min-width: 768px) {
+      .block-green .signup-form {
+        padding-right: 57px; } }
+    .block-green .signup-form .input-holder {
+      display: block;
+      position: relative;
+      height: 40px; }
+      .block-green .signup-form .input-holder input[type='email'] {
+        height: 100%;
+        border: none;
+        outline: none;
+        text-align: left;
+        color: #000;
+        padding-right: 150px; }
+        @media (min-width: 1024px) {
+          .block-green .signup-form .input-holder input[type='email'] {
+            min-width: 534px; } }
+      .block-green .signup-form .input-holder .btn {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: #000;
+        color: #ffce00;
+        border: none;
+        font-size: 11px;
+        line-height: 40px;
+        padding: 0 22px;
+        outline: none; }
+        .block-green .signup-form .input-holder .btn:hover {
+          opacity: 0.9;
+          -webkit-transition: opacity .3s linear;
+                  transition: opacity .3s linear; }
+  .block-green .social-holder {
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 20px; }
+    .block-green .social-holder .social {
+      display: block; }
+      .block-green .social-holder .social li {
+        display: inline-block;
+        vertical-align: top;
+        margin-right: 15px; }
+        .block-green .social-holder .social li a {
+          display: block;
+          color: #ffce00;
+          font-size: 24px;
+          height: 40px;
+          width: 40px;
+          background: #000;
+          text-align: center;
+          text-decoration: none; }
+          .block-green .social-holder .social li a i {
+            line-height: 40px; }
+  .block-green .text {
+    display: block;
+    text-transform: uppercase;
+    font-size: 12px;
+    margin-bottom: 15px; }
 
 .slider-block {
   width: 100%;
