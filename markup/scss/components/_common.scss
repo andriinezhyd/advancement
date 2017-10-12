@@ -1,0 +1,51 @@
+.container {
+	max-width: 1160px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.hidden {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.title-yellow {
+	display: inline-block;
+	color: $black;
+	padding: 7px 5px;
+	background: $yellow;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+.bg-black {
+	// background-color: linear-gradient(to top, #fff, #000);
+}
+
+.btn {
+	-webkit-transition: background .3s ease-in-out, color .3s ease-in-out;
+	transition: background .3s ease-in-out, color .3s ease-in-out;
+	display: inline-block;
+	vertical-align: top;
+	text-align: center;
+	padding: 15px 20px;
+	background: transparent;
+	color: $yellow;
+	font-size: 18px;
+	line-height: 1.22;
+	font-weight: 700;
+	text-transform: uppercase;
+	text-decoration: none;
+	border: 3px solid $yellow;
+	margin-bottom: 15px;
+	min-width: 150px;
+}
+
+.btn:hover {
+	background: $yellow;
+	color: $white;
+}
