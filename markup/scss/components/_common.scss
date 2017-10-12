@@ -50,6 +50,23 @@
 	color: $white;
 }
 
+.green {
+	color: $white;
+	background: $green;
+	padding: 16px 18px;
+	text-align: left;
+	text-transform: uppercase;
+	font-weight: 600;
+	border: none;
+
+	&:hover {
+		opacity: 0.5;
+		transition: opacity .3s linear;
+		background: $green;
+		color: $white;
+	}
+}
+
 .block-green {
 	text-align: center;
 	background: $green;
@@ -162,6 +179,91 @@
 		font-size: 12px;
 		margin-bottom: 15px;
 	}
+}
 
+.mission {
+	padding: 30px 0;
+
+	.right {
+		font-size: 24px;
+	}
+}
+
+.updates {
+	background: $bg-section;
+	padding: 30px 0;
+
+	.right {
+
+		.post {
+			border-bottom: 5px solid $black;
+		}
+	}
+}
+
+.news {
+	padding: 30px 0;
+}
+
+.left {
+	h4 {
+		display: inline-block;
+		font-weight: 600;
+		color: $base-text-color;
+		background: $yellow;
+		text-transform: uppercase;
+		line-height: 29px;
+		margin-bottom: 20px;
+		padding: 0 15px 0 5px;
+	}
+
+	p {
+		margin: 20px 0;
+	}
+
+	a {
+		display: block;
+		font-weight: 600;
+		text-decoration: none;
+		text-transform: uppercase;
+		color: $base-text-color;
+		margin-bottom: 30px;
+
+		i {
+			margin-left: 7px;
+			line-height: 1.2;
+		}
+	}
+
+	.green {
+		display: inline-block;
+	}
+}
+
+.right {
+
+	.post {		
+		margin-bottom: 30px;
+
+		.img-holder {
+			max-width: 266px;
+			margin: 0 auto;
+		}
+		
+		.text {
+			padding: 15px;
+
+			.title {
+				font-weight: 600;
+				font-size: 24px;
+				margin-bottom: 10px;
+			}
+
+			.green {
+				display: block;
+				text-align: center;
+			}
+		}
+	}
 }
 
