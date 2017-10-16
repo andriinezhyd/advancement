@@ -116,8 +116,9 @@
 				outline: none;
 
 				&:hover {
-					opacity: 0.9;
-					transition: opacity .3s linear;
+					background: $yellow;
+					color: $black;
+					transition: all .3s linear;
 				}
 			}
 		}
@@ -147,6 +148,12 @@
 					background: #000;
 					text-align: center;					
 					text-decoration: none;
+
+					&:hover {
+						color: $black;
+						background: $yellow;
+						transition: all .3s linear;
+					}
 
 					i {
 						line-height: 40px;
