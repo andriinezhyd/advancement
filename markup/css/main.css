@@ -354,7 +354,7 @@ td,
 th {
   padding: 0; }
 
-#header #nav .nav, #header #nav .nav .social, .block-green .social-holder .social, .slider-block .info .list-items, .pagination ul, #footer .nav-footer, #footer .nav-footer ul {
+#header #nav .nav, #header #nav .nav .social, .block-green .social-holder .social, .slider-block .info .list-items, .pagination ul, #footer .nav-footer, #footer .nav-footer ul, #footer .bottom-list {
   margin: 0;
   padding: 0;
   list-style: none; }
@@ -758,8 +758,7 @@ input[type='submit'] {
   text-transform: uppercase;
   text-decoration: none;
   border: 3px solid #ffce00;
-  margin-bottom: 15px;
-  min-width: 150px; }
+  margin-bottom: 15px; }
 
 .btn:hover {
   background: #ffce00;
@@ -1105,7 +1104,8 @@ input[type='submit'] {
 #footer {
   padding: 60px 0;
   background: #000;
-  text-align: center; }
+  text-align: center;
+  line-height: 30px; }
   #footer li {
     display: inline-block;
     vertical-align: top; }
@@ -1124,59 +1124,128 @@ input[type='submit'] {
       #footer .nav-footer {
         -ms-flex-flow: row wrap;
             flex-flow: row wrap; } }
-    #footer .nav-footer li {
+    @media (min-width: 1024px) {
+      #footer .nav-footer {
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between; } }
+    #footer .nav-footer .item {
       line-height: 30px; }
       @media (min-width: 480px) {
-        #footer .nav-footer li {
+        #footer .nav-footer .item {
           display: inline-block;
           vertical-align: top;
-          text-align: left; } }
-      #footer .nav-footer li a {
+          text-align: left;
+          width: 50%;
+          padding-right: 10px; } }
+      @media (min-width: 768px) {
+        #footer .nav-footer .item {
+          width: 33.3%; } }
+      @media (min-width: 1024px) {
+        #footer .nav-footer .item {
+          width: 14%; } }
+      @media (min-width: 1024px) {
+        #footer .nav-footer .item:last-child {
+          width: 28%; } }
+      #footer .nav-footer .item .title {
+        text-transform: uppercase;
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 20px; }
+        #footer .nav-footer .item .title:hover {
+          text-decoration: none; }
+      #footer .nav-footer .item a {
         display: block; }
-      #footer .nav-footer li .signup-form {
-        margin-bottom: 50px; }
-        #footer .nav-footer li .signup-form .input-holder {
-          max-width: 255px;
-          margin: 0 auto; }
-          #footer .nav-footer li .signup-form .input-holder input {
+    #footer .nav-footer .item.last {
+      padding-right: 0; }
+      @media (min-width: 480px) {
+        #footer .nav-footer .item.last {
+          max-width: 255px; } }
+      #footer .nav-footer .item.last .signup-form {
+        margin: 0 auto 50px; }
+        @media (min-width: 480px) {
+          #footer .nav-footer .item.last .signup-form {
+            margin: 0 0 50px 0; } }
+        #footer .nav-footer .item.last .signup-form .input-holder {
+          display: block; }
+          @media (min-width: 768px) {
+            #footer .nav-footer .item.last .signup-form .input-holder {
+              margin: 0 auto 20px;
+              max-width: none; } }
+          #footer .nav-footer .item.last .signup-form .input-holder input {
             width: 100%;
-            margin-bottom: 10px;
             color: #bebdbb;
             background: transparent;
             border: none;
             outline: none;
-            border-bottom: 4px solid #fff; }
-          #footer .nav-footer li .signup-form .input-holder button {
+            border-bottom: 4px solid #fff;
+            font-size: 16px;
+            line-height: 39px;
+            padding: 0; }
+          #footer .nav-footer .item.last .signup-form .input-holder button {
             display: block;
             width: 100%;
+            padding: 8px 20px;
             margin: 0 auto 20px; }
-      #footer .nav-footer li .green {
-        max-width: 255px;
+        @media (min-width: 768px) {
+          #footer .nav-footer .item.last .signup-form .zipcode {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-flow: row nowrap;
+                flex-flow: row nowrap;
+            -webkit-box-align: start;
+                -ms-flex-align: start;
+                    align-items: flex-start; } }
+        #footer .nav-footer .item.last .signup-form .zipcode input {
+          margin-bottom: 10px; }
+          @media (min-width: 768px) {
+            #footer .nav-footer .item.last .signup-form .zipcode input {
+              width: calc(50% - 5px);
+              margin: 0 15px 0 0; } }
+        @media (min-width: 768px) {
+          #footer .nav-footer .item.last .signup-form .zipcode button {
+            padding: 8px 0;
+            width: calc(50% - 10px);
+            margin: 0; } }
+      #footer .nav-footer .item.last .green {
         text-align: center;
-        margin: 0 auto;
+        margin: 0 auto 20px;
         text-decoration: none;
-        margin-bottom: 20px;
         font-size: 18px;
-        padding: 12px 32px; }
+        padding: 7px 0; }
+        @media (min-width: 480px) {
+          #footer .nav-footer .item.last .green {
+            display: inline-block;
+            width: calc(50% - 5px);
+            margin: 0; } }
     #footer .nav-footer ul {
       margin-bottom: 20px; }
       #footer .nav-footer ul li {
         display: block;
-        white-space: nowrap;
-        padding-right: 10px; }
-    #footer .nav-footer .title {
-      text-transform: uppercase;
-      font-size: 20px; }
-      #footer .nav-footer .title:hover {
-        text-decoration: none; }
-    #footer .nav-footer > li > .title {
-      margin-bottom: 20px; }
+        width: 100%; }
+        #footer .nav-footer ul li .title {
+          margin-bottom: 0 !important; }
+          #footer .nav-footer ul li .title:hover {
+            text-decoration: underline; }
+  #footer .logo {
+    display: block;
+    margin-bottom: 20px; }
   #footer .bottom-list li {
     display: block;
     padding: 5px 0; }
-    #footer .bottom-list li a:hover {
-      color: #ffcd02;
-      text-decoration: none; }
+    #footer .bottom-list li a {
+      line-height: 30px; }
+      #footer .bottom-list li a:hover {
+        color: #ffcd02;
+        text-decoration: none; }
+    @media (min-width: 768px) {
+      #footer .bottom-list li {
+        display: inline-block;
+        padding: 0 15px; } }
   #footer .copyright-info {
-    color: #bebdbb; }
+    color: #bebdbb;
+    line-height: 30px; }
 /*# sourceMappingURL=main.css.map */

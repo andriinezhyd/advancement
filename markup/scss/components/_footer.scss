@@ -2,6 +2,7 @@
 	padding: 60px 0;
 	background: $black;
 	text-align: center;
+	line-height: 30px;
 
 	li {
 		display: inline-block;
@@ -27,54 +28,138 @@
 			flex-flow: row wrap;
 		}
 
-		li {
+		@include media('>=desktop') {
+			flex-flow: row nowrap;
+			justify-content: space-between;
+		}
+
+		.item {
 			line-height: 30px;
 
 			@include media('>=phone') {
 				display: inline-block;
 				vertical-align: top;
 				text-align: left;
+				width: 50%;
+				padding-right: 10px;
+			}
+			
+			@include media('>=tablet') {
+				width: 33.3%;
+			}
+
+			@include media('>=desktop') {
+				width: 14%;
+			}
+
+			&:last-child {
+
+				@include media('>=desktop') {
+					width: 28%;
+				}
+			}
+
+			.title {
+				text-transform: uppercase;
+				font-size: 20px;
+				font-weight: 600;
+				margin-bottom: 20px;
+
+				&:hover {
+					text-decoration: none;
+				}
 			}
 
 			a {
 				display: block;
 			}
 			
-			.signup-form {
+			
+		}
 
-				margin-bottom: 50px;
+		.item.last {
+			padding-right: 0;
+
+			@include media('>=phone') {
+				max-width: 255px;
+			}
+
+			.signup-form {			
+				margin: 0 auto 50px;
+
+				@include media('>=phone') {
+					margin: 0 0 50px 0;
+				}
 
 				.input-holder {
-					max-width: 255px;
-					margin: 0 auto;
+					display: block;					
+
+					@include media('>=tablet') {
+						margin: 0 auto 20px;
+						max-width: none;
+					}
 
 					input {
-						width: 100%;
-						margin-bottom: 10px;
+						width: 100%;						
 						color: $light-gray;
 						background: transparent;
 						border: none;
 						outline: none;
 						border-bottom: 4px solid $white;
+						font-size: 16px;
+						line-height: 39px;
+						padding: 0;
 					}
 					
 					button {
 						display: block;
 						width: 100%;
+						padding: 8px 20px;
 						margin: 0 auto 20px;
+					}
+				}
+
+				.zipcode {
+
+					@include media('>=tablet') {
+						display: flex;
+						flex-flow: row nowrap;
+						align-items: flex-start;
+					}
+
+					input {
+						margin-bottom: 10px;
+
+						@include media('>=tablet') {
+							width: calc(50% - 5px);
+							margin:0 15px 0 0;
+						}
+					}
+
+					button {
+
+						@include media('>=tablet') {
+							padding: 8px 0;
+							width: calc(50% - 10px);
+							margin: 0;
+
+						}
 					}
 				}
 			}
 
 			.green {
-				max-width: 255px;
-				// display: inline-block;
 				text-align: center;
-				margin: 0 auto;
+				margin: 0 auto 20px;
 				text-decoration: none;
-				margin-bottom: 20px;
 				font-size: 18px;
-				padding: 12px 32px;
+				padding: 7px 0;
+
+				@include media('>=phone') {
+					display: inline-block;
+					width: calc(50% - 5px);
+					margin: 0;
+				}
 			}
 		}
 
@@ -85,41 +170,50 @@
 
 			li {
 				display: block;
-				white-space: nowrap;
-				padding-right: 10px;
+				width: 100%;
+
+				.title {					
+					margin-bottom: 0 !important;
+
+					&:hover {
+						text-decoration: underline;
+					}
+				}
 			}
-		}
+		}		
+	}
 
-		.title {
-			text-transform: uppercase;
-			font-size: 20px;
-
-			&:hover {
-				text-decoration: none;
-			}
-		}
-
-		& > li > .title {
-			margin-bottom: 20px;
-		}
+	.logo {
+		display: block;
+		margin-bottom: 20px;
 	}
 
 	.bottom-list {
+		@extend %listreset;
+		
 		li {
 			display: block;
 			padding: 5px 0;
 
 			a {
+				line-height: 30px;
+
 				&:hover {
 					color: #ffcd02;
 					text-decoration: none;
 				}
+			}
+
+			@include media('>=tablet') {
+				display: inline-block;
+				padding: 0 15px;
 			}
 		}
 	}
 
 	.copyright-info {
 		color: $light-gray;
+		line-height: 30px;
 	}
 }
 

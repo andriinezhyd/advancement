@@ -22,10 +22,6 @@
 	text-decoration: none;
 }
 
-.bg-black {
-	// background-color: linear-gradient(to top, #fff, #000);
-}
-
 .btn {
 	transition: background .3s ease-in-out, color .3s ease-in-out;
 	display: inline-block;
@@ -41,7 +37,6 @@
 	text-decoration: none;
 	border: 3px solid $yellow;
 	margin-bottom: 15px;
-	min-width: 150px;
 }
 
 .btn:hover {
