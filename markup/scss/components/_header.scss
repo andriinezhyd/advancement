@@ -54,6 +54,8 @@
 			.social {
 				@extend %listreset;
 
+				margin-bottom: 20px;
+
 				@include media('>=tablet') {
 					display: inline-block;
 				}
@@ -66,6 +68,7 @@
 
 					a {
 						font-size: 20px;
+						color: $black;
 					}
 				}
 
@@ -73,28 +76,43 @@
 
 			.search {
 				display: inline-block;
-				vertical-align: middle;
+				vertical-align: top;
 				
 				a {
 					display: inline-block;
 					vertical-align: middle;
 					background: $black;
-					width: 45px;
-					height: 45px;
+					width: 39px;
+					height: 39px;			
 					padding: 0;
 					text-align: center;
 
+					@include media('>=tablet') {
+						width: 45px;
+					height: 45px;
+					}
+
 					i {
-						line-height: 45px;
+						line-height: 39px;
 						font-size: 18px;
 						color: $yellow;
+
+						@include media('>=tablet') {
+							line-height: 45px;
+						}
 					}
+
+
 				}				
 			}
 
 			.donate {
+				display: inline-block;
 				position: relative;
-				margin-left: 60px;				
+				
+				@include media('>=tablet') {
+					margin-left: 60px;	
+				}			
 
 				&:after {
 
