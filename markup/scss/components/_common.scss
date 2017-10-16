@@ -186,18 +186,19 @@
 	@include media('>=tablet') {
 		display: inline-block;
 		vertical-align: top;
-		width: 25%;
-		padding-right: 50px;	
+		width: calc(25% - 50px);
+		margin-right: 50px;	
 	}
 
 	h4 {
-		display: inline-block;
+		display: inline;
 		font-weight: 600;
 		color: $base-text-color;
+		// white-space: nowrap;
 		background: $yellow;
 		text-transform: uppercase;
 		line-height: 29px;
-		margin-bottom: 20px;
+		// margin-bottom: 20px;
 		padding: 0 15px 0 5px;
 	}
 
@@ -223,6 +224,12 @@
 		display: inline-block;
 		color: $white;
 	}
+
+	.more {
+		&:hover {
+			opacity: 0.7;
+		}
+	}
 }
 
 .right {
@@ -234,11 +241,7 @@
 		margin-left: -4px;
 	}
 
-	.post {		
-		
-		.img-holder {
-			
-		}
+	.post {
 		
 		.text {
 			padding: 15px;
@@ -271,26 +274,37 @@
 
 	.right {
 
+		@include media('>=phone') {
+			margin: 0 -10px;
+		}
+
 		@include media('>=tablet') {
-			margin: 0 0 0 -20px;
-			min-width: 75%;
+			margin: 0 -20px;
+			min-width: calc(75% + 20px);
 		}
 
 		.post {
 			background: $white;
 			position: relative;
 			overflow: hidden;
-			max-width: 275px;
 			margin: 0 auto 30px;
+			margin-left: -4px;
+			overflow: hidden;
+			
 
-			@include media('>=tablet') {
+			@include media('>=phone') {
 				display: inline-block;
 				width: 50%;
+				padding: 0 10px;
+
+			}
+
+			@include media('>=tablet') {
+				padding: 0 20px;
 			}
 
 			@include media('>=desktop') {
-				width: 33.3%;
-				
+				width: 33.3%;				
 			}
 
 			.img-holder {
@@ -307,16 +321,21 @@
 			.btn {
 				display: block;
 				text-align: center;
-				margin-bottom: 0;
 				transform: translateY(0);
 				position: absolute;
 				left: 0;
 				right: 0;
 
+				@include media('>=phone') {
+					margin: 0 10px;
+				}
+
+
 				&:hover {
 					background: $bg-green;
 				}
 			}
+
 			&:hover .btn {
 				transition: transform .5s ease-in-out;
 				transform: translateY(-100%);
@@ -331,16 +350,28 @@
 	padding: 30px 0;
 
 	.left {
-		max-width: 300px;
+		
+
+		@include media('>=tablet') {
+			width: 100%;
+		}
+
+		@include media('>=desktop') {
+			width: calc(25% - 50px);
+		}
 	}
 
 	.right {
+
 		@include media('>=tablet') {
-			width: calc(100% - 300px);
+			width: 100%;
+		}
+
+		@include media('>=desktop') {
+			width: 75%;
 		}
 
 		.post {
-			max-width: 266px;
 			margin: 0 auto 30px;
 
 			@include media('>=tablet') {
@@ -362,7 +393,7 @@
 				display: inline-block;
 				vertical-align: top;
 				font-size: 18px;
-				
+
 				@include media('>=tablet') {
 					width: calc(70% - 40px);
 				}
@@ -387,6 +418,7 @@
 					font-size: 16px;
 					color: $green;
 					font-weight: 600;
+					letter-spacing: 0.12em;
 
 					&:hover {
 						text-decoration: underline;
