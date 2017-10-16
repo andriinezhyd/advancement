@@ -64,6 +64,7 @@
 				font-size: 20px;
 				font-weight: 600;
 				margin-bottom: 20px;
+				white-space: nowrap;
 
 				&:hover {
 					text-decoration: none;
@@ -144,6 +145,10 @@
 							margin: 0;
 
 						}
+
+						&:hover {
+							color: $black;
+						}
 					}
 				}
 			}
@@ -171,9 +176,12 @@
 			li {
 				display: block;
 				width: 100%;
+			}
 
-				.title {					
-					margin-bottom: 0 !important;
+			&.campaigns {
+
+				.title {
+					margin-bottom: 0;
 
 					&:hover {
 						text-decoration: underline;

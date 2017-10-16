@@ -1153,7 +1153,8 @@ input[type='submit'] {
         text-transform: uppercase;
         font-size: 20px;
         font-weight: 600;
-        margin-bottom: 20px; }
+        margin-bottom: 20px;
+        white-space: nowrap; }
         #footer .nav-footer .item .title:hover {
           text-decoration: none; }
       #footer .nav-footer .item a {
@@ -1210,6 +1211,8 @@ input[type='submit'] {
             padding: 8px 0;
             width: calc(50% - 10px);
             margin: 0; } }
+        #footer .nav-footer .item.last .signup-form .zipcode button:hover {
+          color: #000; }
       #footer .nav-footer .item.last .green {
         text-align: center;
         margin: 0 auto 20px;
@@ -1226,10 +1229,10 @@ input[type='submit'] {
       #footer .nav-footer ul li {
         display: block;
         width: 100%; }
-        #footer .nav-footer ul li .title {
-          margin-bottom: 0 !important; }
-          #footer .nav-footer ul li .title:hover {
-            text-decoration: underline; }
+      #footer .nav-footer ul.campaigns .title {
+        margin-bottom: 0; }
+        #footer .nav-footer ul.campaigns .title:hover {
+          text-decoration: underline; }
   #footer .logo {
     display: block;
     margin-bottom: 20px; }
