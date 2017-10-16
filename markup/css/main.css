@@ -421,7 +421,7 @@ h3, .h3 {
   font-size: 24px; }
 
 h4, .h4 {
-  font-size: 22px; }
+  font-size: 20px; }
 
 h5, .h5 {
   font-size: 17px; }
@@ -866,17 +866,16 @@ input[type='submit'] {
   .left {
     display: inline-block;
     vertical-align: top;
-    width: 25%;
-    padding-right: 50px; } }
+    width: calc(25% - 50px);
+    margin-right: 50px; } }
 
 .left h4 {
-  display: inline-block;
+  display: inline;
   font-weight: 600;
   color: #000;
   background: #ffce00;
   text-transform: uppercase;
   line-height: 29px;
-  margin-bottom: 20px;
   padding: 0 15px 0 5px; }
 
 .left p {
@@ -896,6 +895,9 @@ input[type='submit'] {
 .left .green {
   display: inline-block;
   color: #fff; }
+
+.left .more:hover {
+  opacity: 0.7; }
 
 @media (min-width: 768px) {
   .right {
@@ -922,20 +924,28 @@ input[type='submit'] {
 .updates {
   background: #f0efef;
   padding: 30px 0; }
+  @media (min-width: 480px) {
+    .updates .right {
+      margin: 0 -10px; } }
   @media (min-width: 768px) {
     .updates .right {
-      margin: 0 0 0 -20px;
-      min-width: 75%; } }
+      margin: 0 -20px;
+      min-width: calc(75% + 20px); } }
   .updates .right .post {
     background: #fff;
     position: relative;
     overflow: hidden;
-    max-width: 275px;
-    margin: 0 auto 30px; }
-    @media (min-width: 768px) {
+    margin: 0 auto 30px;
+    margin-left: -4px;
+    overflow: hidden; }
+    @media (min-width: 480px) {
       .updates .right .post {
         display: inline-block;
-        width: 50%; } }
+        width: 50%;
+        padding: 0 10px; } }
+    @media (min-width: 768px) {
+      .updates .right .post {
+        padding: 0 20px; } }
     @media (min-width: 1024px) {
       .updates .right .post {
         width: 33.3%; } }
@@ -949,13 +959,15 @@ input[type='submit'] {
     .updates .right .post .btn {
       display: block;
       text-align: center;
-      margin-bottom: 0;
       -webkit-transform: translateY(0);
           -ms-transform: translateY(0);
               transform: translateY(0);
       position: absolute;
       left: 0;
       right: 0; }
+      @media (min-width: 480px) {
+        .updates .right .post .btn {
+          margin: 0 10px; } }
       .updates .right .post .btn:hover {
         background: #327b4b; }
     .updates .right .post:hover .btn {
@@ -969,13 +981,19 @@ input[type='submit'] {
 
 .news {
   padding: 30px 0; }
-  .news .left {
-    max-width: 300px; }
+  @media (min-width: 768px) {
+    .news .left {
+      width: 100%; } }
+  @media (min-width: 1024px) {
+    .news .left {
+      width: calc(25% - 50px); } }
   @media (min-width: 768px) {
     .news .right {
-      width: calc(100% - 300px); } }
+      width: 100%; } }
+  @media (min-width: 1024px) {
+    .news .right {
+      width: 75%; } }
   .news .right .post {
-    max-width: 266px;
     margin: 0 auto 30px; }
     @media (min-width: 768px) {
       .news .right .post {
@@ -1008,7 +1026,8 @@ input[type='submit'] {
         text-decoration: none;
         font-size: 16px;
         color: #106d31;
-        font-weight: 600; }
+        font-weight: 600;
+        letter-spacing: 0.12em; }
         .news .right .post .content .more:hover {
           text-decoration: underline; }
 
