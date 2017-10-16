@@ -832,9 +832,10 @@ input[type='submit'] {
         padding: 0 22px;
         outline: none; }
         .block-green .signup-form .input-holder .btn:hover {
-          opacity: 0.9;
-          -webkit-transition: opacity .3s linear;
-                  transition: opacity .3s linear; }
+          background: #ffce00;
+          color: #000;
+          -webkit-transition: all .3s linear;
+                  transition: all .3s linear; }
   .block-green .social-holder {
     display: inline-block;
     vertical-align: middle;
@@ -854,6 +855,11 @@ input[type='submit'] {
           background: #000;
           text-align: center;
           text-decoration: none; }
+          .block-green .social-holder .social li a:hover {
+            color: #000;
+            background: #ffce00;
+            -webkit-transition: all .3s linear;
+                    transition: all .3s linear; }
           .block-green .social-holder .social li a i {
             line-height: 40px; }
   .block-green .text {
