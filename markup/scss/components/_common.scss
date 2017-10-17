@@ -60,103 +60,142 @@
 		text-align: left;
 	}
 
-	.title {
+	.left {
 		display: inline-block;
-		vertical-align: middle;
-		width: 300px;
-		font-size: 24px;
-		line-height: 1.28125;
-		margin-bottom: 20px;
-		margin-right: -3px;
+		margin: 0 auto 20px;
+		// text-align: center;
 
+		@include media('>=phone') {
+			text-align: left;
+
+		}
 
 		@include media('>=tablet') {
-			font-size: 32px;
+			display: inline-block;
+			width: calc(25% - 50px);
+			margin: 0 50px 0 0;
+			vertical-align: top;
+			font-size: 28px;
+		}
+
+		.title {
+			font-size: 24px;
+			line-height: 1.281;
 		}
 	}
 
-	.signup-form {
+	.right {
 		display: inline-block;
-		vertical-align: middle;
-		margin-bottom: 20px;
+		vertical-align: top;
+		// margin-bottom: 20px;
 
-		@include media('>=tablet') {
-			padding-right: 57px;
+		@include media('>=phone') {
+			text-align: left;
 		}
 
-		.input-holder {
-			display: block;
-			position: relative;
-			height: 40px;
+		@include media('>=tablet') {
+			width: calc(100% - 300px);
+			margin-left: -4px;
+		}
 
-			input[type='email'] {
-				height: 100%;
-				border: none;
-				outline: none;
-				text-align: left;
-				color: $black;
-				padding-right: 150px;
+		.signup-form {
+			display: inline-block;
+			vertical-align: top;
+			margin-bottom: 20px;
 
-				@include media('>=desktop') {
-					min-width: 534px;
-				}
+			@include media('>=tablet') {
+				width: 100%;
+				max-width: 534px;
+				padding-right: 57px;
 			}
 
-			.btn {
+			@include media('>=desktop') {
+				margin-bottom: 0;
+			}
+
+			.input-holder {
 				display: block;
-				position: absolute;
-				top: 0;
-				right: 0;
-				background: #000;
-				color: $yellow;
-				border: none;
-				font-size: 11px;
-				line-height: 40px;
-				padding: 0 22px;
-				outline: none;
+				position: relative;
+				height: 40px;
 
-				&:hover {
-					background: $yellow;
+				input[type='email'] {
+					height: 100%;
+					border: none;
+					outline: none;
+					text-align: left;
 					color: $black;
-					transition: all .3s linear;
+					padding-right: 150px;
+
+					@include media('>=tablet') {
+						width: 100%;
+					}
 				}
-			}
-		}
-	}
 
-	.social-holder {
-		display: inline-block;
-		vertical-align: middle;
-		margin-bottom: 20px;
-
-		.social {
-			@extend %listreset;			
-				
-			display: block;
-
-			li {
-				display: inline-block;
-				vertical-align: top;
-				margin-right: 15px;
-
-				a {
+				.btn {
 					display: block;
-					color: $yellow;
-					font-size: 24px;					
-					height: 40px;
-					width: 40px;
+					position: absolute;
+					top: 0;
+					right: 0;
 					background: #000;
-					text-align: center;					
-					text-decoration: none;
+					color: $yellow;
+					border: none;
+					font-size: 11px;
+					line-height: 40px;
+					padding: 0 22px;
+					outline: none;
 
-					&:hover {
-						color: $black;
-						background: $yellow;
-						transition: all .3s linear;
+					@include media('>=tablet') {
+						margin-bottom: 0;
 					}
 
-					i {
-						line-height: 40px;
+					&:hover {
+						background: $yellow;
+						color: $black;
+						transition: all .3s linear;
+					}
+				}
+			}
+		}
+
+		.social-holder {
+			display: block;
+			margin: 0 auto;
+
+			@include media('>=tablet') {
+				display: inline-block;
+				vertical-align: top;
+				margin-right: -4px;
+			}
+
+			.social {
+				@extend %listreset;			
+				
+				display: block;
+
+				li {
+					display: inline-block;
+					vertical-align: top;
+					margin-right: 15px;
+
+					a {
+						display: block;
+						color: $yellow;
+						font-size: 24px;					
+						height: 40px;
+						width: 40px;
+						background: #000;
+						text-align: center;					
+						text-decoration: none;
+
+						&:hover {
+							color: $black;
+							background: $yellow;
+							transition: all .3s linear;
+						}
+
+						i {
+							line-height: 40px;
+						}
 					}
 				}
 			}
