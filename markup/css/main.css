@@ -354,7 +354,7 @@ td,
 th {
   padding: 0; }
 
-#header #nav .nav, #header #nav .nav .social, .block-green .social-holder .social, .slider-block .info .list-items, .pagination ul, #footer .nav-footer, #footer .nav-footer ul, #footer .bottom-list {
+#header #nav .nav, #header #nav .nav .social, .block-green .right .social-holder .social, .slider-block .info .list-items, .pagination ul, #footer .nav-footer, #footer .nav-footer ul, #footer .bottom-list {
   margin: 0;
   padding: 0;
   list-style: none; }
@@ -830,82 +830,108 @@ input[type='submit'] {
   @media (min-width: 768px) {
     .block-green {
       text-align: left; } }
-  .block-green .title {
+  .block-green .left {
     display: inline-block;
-    vertical-align: middle;
-    width: 300px;
-    font-size: 24px;
-    line-height: 1.28125;
-    margin-bottom: 20px;
-    margin-right: -3px; }
+    margin: 0 auto 20px; }
+    @media (min-width: 480px) {
+      .block-green .left {
+        text-align: left; } }
     @media (min-width: 768px) {
-      .block-green .title {
-        font-size: 32px; } }
-  .block-green .signup-form {
-    display: inline-block;
-    vertical-align: middle;
-    margin-bottom: 20px; }
-    @media (min-width: 768px) {
-      .block-green .signup-form {
-        padding-right: 57px; } }
-    .block-green .signup-form .input-holder {
-      display: block;
-      position: relative;
-      height: 40px; }
-      .block-green .signup-form .input-holder input[type='email'] {
-        width: 100%;
-        height: 100%;
-        border: none;
-        outline: none;
-        text-align: left;
-        color: #000;
-        padding-right: 150px; }
-        @media (min-width: 1024px) {
-          .block-green .signup-form .input-holder input[type='email'] {
-            min-width: 534px; } }
-      .block-green .signup-form .input-holder .btn {
-        display: block;
-        position: absolute;
-        top: 0;
-        right: 0;
-        background: #000;
-        color: #ffce00;
-        border: none;
-        font-size: 11px;
-        line-height: 40px;
-        padding: 0 22px;
-        outline: none; }
-        .block-green .signup-form .input-holder .btn:hover {
-          background: #ffce00;
-          color: #000;
-          -webkit-transition: all .3s linear;
-                  transition: all .3s linear; }
-  .block-green .social-holder {
-    display: inline-block;
-    vertical-align: middle;
-    margin-bottom: 20px; }
-    .block-green .social-holder .social {
-      display: block; }
-      .block-green .social-holder .social li {
+      .block-green .left {
         display: inline-block;
+        width: calc(25% - 50px);
+        margin: 0 50px 0 0;
         vertical-align: top;
-        margin-right: 15px; }
-        .block-green .social-holder .social li a {
+        font-size: 28px; } }
+    .block-green .left .title {
+      font-size: 24px;
+      line-height: 1.281; }
+  .block-green .right {
+    display: inline-block;
+    vertical-align: top; }
+    @media (min-width: 480px) {
+      .block-green .right {
+        text-align: left; } }
+    @media (min-width: 768px) {
+      .block-green .right {
+        width: calc(100% - 300px);
+        margin-left: -4px; } }
+    .block-green .right .signup-form {
+      display: inline-block;
+      vertical-align: top;
+      margin-bottom: 20px; }
+      @media (min-width: 768px) {
+        .block-green .right .signup-form {
+          width: 100%;
+          max-width: 534px;
+          padding-right: 57px; } }
+      @media (min-width: 1024px) {
+        .block-green .right .signup-form {
+          margin-bottom: 0; } }
+      .block-green .right .signup-form .input-holder {
+        display: block;
+        position: relative;
+        height: 40px; }
+        .block-green .right .signup-form .input-holder input[type='email'] {
+          height: 100%;
+          border: none;
+          outline: none;
+          text-align: left;
+          color: #000;
+          padding-right: 150px; }
+          @media (min-width: 768px) {
+            .block-green .right .signup-form .input-holder input[type='email'] {
+              width: 100%; } }
+        .block-green .right .signup-form .input-holder .btn {
           display: block;
-          color: #ffce00;
-          font-size: 24px;
-          height: 40px;
-          width: 40px;
+          position: absolute;
+          top: 0;
+          right: 0;
           background: #000;
-          text-align: center;
-          text-decoration: none; }
-          .block-green .social-holder .social li a:hover {
-            color: #000;
+          color: #ffce00;
+          border: none;
+          font-size: 11px;
+          line-height: 40px;
+          padding: 0 22px;
+          outline: none; }
+          @media (min-width: 768px) {
+            .block-green .right .signup-form .input-holder .btn {
+              margin-bottom: 0; } }
+          .block-green .right .signup-form .input-holder .btn:hover {
             background: #ffce00;
+            color: #000;
             -webkit-transition: all .3s linear;
                     transition: all .3s linear; }
-          .block-green .social-holder .social li a i {
-            line-height: 40px; }
+    .block-green .right .social-holder {
+      display: block;
+      margin: 0 auto; }
+      @media (min-width: 768px) {
+        .block-green .right .social-holder {
+          display: inline-block;
+          vertical-align: top;
+          margin-right: -4px; } }
+      .block-green .right .social-holder .social {
+        display: block; }
+        .block-green .right .social-holder .social li {
+          display: inline-block;
+          vertical-align: top;
+          margin-right: 15px; }
+          .block-green .right .social-holder .social li a {
+            display: block;
+            color: #ffce00;
+            font-size: 24px;
+            height: 40px;
+            width: 40px;
+            background: #000;
+            text-align: center;
+            text-decoration: none; }
+            .block-green .right .social-holder .social li a:hover {
+              color: #000;
+              background: #ffce00;
+              -webkit-transition: all .3s linear;
+                      transition: all .3s linear; }
+            .block-green .right .social-holder .social li a i {
+              line-height: 40px; }
   .block-green .text {
     display: block;
     text-transform: uppercase;
