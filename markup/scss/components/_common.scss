@@ -74,7 +74,6 @@
 	.left {
 		display: inline-block;
 		margin: 0 auto 20px;
-		// text-align: center;
 
 		@include media('>=phone') {
 			text-align: left;
@@ -121,6 +120,7 @@
 
 			@include media('>=desktop') {
 				margin-bottom: 0;
+				width: 65%;
 			}
 
 			.input-holder {
@@ -134,11 +134,8 @@
 					outline: none;
 					text-align: left;
 					color: $black;
-					padding-right: 150px;
-
-					@include media('>=tablet') {
-						width: 100%;
-					}
+					padding-right: 115px;
+					width: 100%;
 				}
 
 				.btn {
@@ -153,6 +150,7 @@
 					line-height: 40px;
 					padding: 0 22px;
 					outline: none;
+					width: 107px;
 
 					@include media('>=tablet') {
 						margin-bottom: 0;
@@ -178,7 +176,7 @@
 			}
 
 			.social {
-				@extend %listreset;			
+				@extend %listreset;
 				
 				display: block;
 
@@ -190,11 +188,11 @@
 					a {
 						display: block;
 						color: $yellow;
-						font-size: 24px;					
+						font-size: 24px;
 						height: 40px;
 						width: 40px;
 						background: #000;
-						text-align: center;					
+						text-align: center;
 						text-decoration: none;
 
 						&:hover {
@@ -365,6 +363,10 @@
 
 				@include media('>=phone') {
 					margin: 0 10px;
+				}
+
+				@include media('>=tablet') {
+					margin: 0 20px;
 				}
 
 

@@ -11,20 +11,20 @@
 		align-items: flex-end;
 	}
 
-
 	.logo {
 
 		display: inline-block;
 		vertical-align: top;
-		// width: 112px;
 		position: relative;
 		z-index: 99;
+		transform: scale(.8);
 		
 		@include media('>=tablet') {
 			display: inline-block;
 			vertical-align: top;
 			position: relative;
-			z-index: 99;		
+			z-index: 99;
+			transform: scale(1);	
 		}
 	}
 
@@ -84,12 +84,12 @@
 						}
 					}
 				}
-
 			}
 
 			.search {
 				display: inline-block;
 				vertical-align: top;
+				margin-right: 5px;
 
 				@include media('>=desktop') {
 					vertical-align: middle;
@@ -110,6 +110,16 @@
 						height: 45px;
 					}
 
+					&:hover {
+						@extend %transition;
+
+						background: $yellow;
+
+						i {
+							color: $black;
+						}
+					}
+
 					i {
 						line-height: 47px;
 						font-size: 18px;
@@ -119,15 +129,12 @@
 							line-height: 45px;
 						}
 					}
-
-
 				}
 			}
 
 			.donate {
 				display: inline-block;
 				position: relative;
-				// vertical-align: top;
 				
 				@include media('>=desktop') {
 					margin-left: 20px;
@@ -163,6 +170,7 @@
 			}
 
 			li {
+
 				@include media('>=tablet') {
 					display: inline-block;
 					vertical-align: middle;
@@ -170,7 +178,6 @@
 				}
 			}
 		}
-
 	}
 
 	.opener {
