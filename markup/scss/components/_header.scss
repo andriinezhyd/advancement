@@ -5,14 +5,14 @@
 	padding: 5px 0 0 0;
 	position: relative;
 	z-index: 100;
-	background: #fff;
+	background: $white;
+	border-bottom: 5px solid $black;
 
 	@include media('>=desktop') {
 		align-items: flex-end;
 	}
 
 	.logo {
-
 		display: inline-block;
 		vertical-align: top;
 		position: relative;
@@ -52,11 +52,14 @@
 			@extend %listreset;
 			
 			text-align: center;
+
+			@include media('>=desktop') {
+				display: inline-block;
+				vertical-align: middle;
+			}
 			
 			.social {
 				@extend %listreset;
-
-				margin-bottom: 20px;
 
 				@include media('>=desktop') {
 					display: inline-block;
@@ -89,13 +92,14 @@
 			}
 
 			.search {
-				display: inline-block;
 				vertical-align: top;
-				margin-right: 5px;
+				margin-bottom: 20px;
+				
 
 				@include media('>=desktop') {
+					display: inline-block;
 					vertical-align: middle;
-					margin-right: 20px;
+					margin: 0 20px 0 0;
 				}
 				
 				a {
@@ -134,45 +138,33 @@
 				}
 			}
 
-			.donate {
-				display: inline-block;
-				position: relative;
-				
-				@include media('>=desktop') {
-					margin-left: 20px;
-					padding: 21px 0 22px;
-				}			
-
-				&:after {
-					@include media('>=desktop') {
-						content: "";
-						position: absolute;
-						bottom: 0;
-						left: -25px;
-						width: 5px;
-						height: 100%;
-						background: $black;
-					}
-				}
-
-				.green {
-					display: inline-block;
-					color: $btn-color;
-					padding: 13px 25px;
-					line-height: 21px;
-
-					&:hover {
-						background-color: lighten( $btn-background, 10% )
-					}
-				}
-			}
-
 			li {
 				@include media('>=tablet') {
 					display: inline-block;
 					vertical-align: middle;
-					margin-left: -4px;
+					// margin-left: -4px;
 				}
+			}
+		}
+
+		.donate-holder {
+			display: block;
+
+			@include media('>=desktop') {
+				width: 15%;
+				display: inline-block;
+				vertical-align: middle;
+				border: none;
+				border-left: 5px solid $black;
+				height: 100%;
+				padding: 22px 38px;
+			}
+
+			.green {
+				height: 100%;
+				font-size: 16px;
+				line-height: 46px;
+
 			}
 		}
 	}

@@ -53,6 +53,7 @@
 	text-transform: uppercase;
 	font-weight: 600;
 	border: none;
+	text-decoration: none;
 
 	&:hover {
 		@include animate (background);
