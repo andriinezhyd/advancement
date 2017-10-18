@@ -23,7 +23,7 @@
 			}
 
 			.slideset {
-				position: relative;				
+				position: relative;
 				padding-top: 56.25%;
 
 				@include media('>=desktop') {
@@ -132,16 +132,17 @@
 						font-size: 21px;
 						line-height: 30px;
 
-						&:hover {
-							opacity: 0.5;
-							transition: opacity .3s linear;
-						}
-
 						&:before {
 							position: absolute;
 							top: 1px;
 							right: -34px;
 							color: $yellow;
+						}
+
+						&:hover {
+							@extend %transition;
+
+							color: lighten( $base-text-color, 40% )
 						}
 					}
 				}

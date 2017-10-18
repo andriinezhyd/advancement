@@ -29,7 +29,8 @@
 	}
 
 	#nav {
-		transition: max-height .3s ease-in-out;
+		@include animate(max-height);
+
 		position: absolute;
 		left: 0;
 		right: 0;
@@ -79,8 +80,9 @@
 						text-decoration: none;
 
 						&:hover {
+							@extend %transition;
+
 							color: $yellow;
-							transition: color .3s;
 						}
 					}
 				}
@@ -111,7 +113,7 @@
 					}
 
 					&:hover {
-						@extend %transition;
+						@include animate (background color);
 
 						background: $yellow;
 
@@ -142,7 +144,6 @@
 				}			
 
 				&:after {
-
 					@include media('>=desktop') {
 						content: "";
 						position: absolute;
@@ -154,23 +155,19 @@
 					}
 				}
 
-				a {
-					@extend %transition;
-
+				.green {
 					display: inline-block;
-					color: $white;
-					background-color: $green;
+					color: $btn-color;
 					padding: 13px 25px;
 					line-height: 21px;
 
 					&:hover {
-						opacity: 0.5;
+						background-color: lighten( $btn-background, 10% )
 					}
 				}
 			}
 
 			li {
-
 				@include media('>=tablet') {
 					display: inline-block;
 					vertical-align: middle;
@@ -202,8 +199,8 @@
 		&:before,
 		&:after,
 		span {
-			-webkit-transition: all .3s ease-in-out;
-			transition: all .3s ease-in-out;
+			@extend %transition;
+
 			content: "";
 			position: absolute;
 			top: 17px;
@@ -224,7 +221,8 @@
 }
 
 .drop {
-	transition: transform .3s ease-in-out;
+	@include animate(transform);
+
 	position: relative;
 	top: 0;
 	left: 0;
@@ -239,6 +237,8 @@
 	}
 
 	.nav>li a {
+		@include animate (background-color);
+
 		display: inline-block;
 		text-decoration: none;
 		color: $black;

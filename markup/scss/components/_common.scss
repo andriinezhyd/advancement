@@ -23,7 +23,8 @@
 }
 
 .btn {
-	transition: background .3s ease-in-out, color .3s ease-in-out;
+	@include animate (background color);
+
 	display: inline-block;
 	vertical-align: top;
 	text-align: center;
@@ -41,12 +42,12 @@
 
 .btn:hover {
 	background: $yellow;
-	color: $white;
+	color: $btn-color;
 }
 
 .green {
-	color: $white;
-	background: $green;
+	color: $btn-color;
+	background: $btn-background;
 	padding: 16px 18px;
 	text-align: left;
 	text-transform: uppercase;
@@ -54,10 +55,9 @@
 	border: none;
 
 	&:hover {
-		opacity: 0.9;
-		transition: opacity .3s linear;
-		background: $green;
-		
+		@include animate (background);
+
+		background: lighten($btn-background, 10%);
 	}
 }
 
@@ -159,7 +159,6 @@
 					&:hover {
 						background: $yellow;
 						color: $black;
-						transition: all .3s linear;
 					}
 				}
 			}
@@ -198,7 +197,6 @@
 						&:hover {
 							color: $black;
 							background: $yellow;
-							transition: all .3s linear;
 						}
 
 						i {
@@ -260,10 +258,10 @@
 		color: $white;
 	}
 
-	.more {
-		&:hover {
-			opacity: 0.7;
-		}
+	.more:hover {
+		@extend %transition;
+
+		color: lighten( $base-text-color, 40% )
 	}
 }
 
@@ -339,7 +337,7 @@
 			}
 
 			@include media('>=desktop') {
-				width: 33.3%;				
+				width: 33.3%;
 			}
 
 			.img-holder {
@@ -376,10 +374,9 @@
 			}
 
 			&:hover .btn {
-				transition: transform .5s ease-in-out;
+				@extend %transition;
+
 				transform: translateY(-100%);
-				z-index: 1;
-				opacity: 1;
 			}
 		}
 	}
@@ -467,6 +464,3 @@
 		}
 	}
 }
-
-
-
