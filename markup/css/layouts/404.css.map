@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "404.css",
+	"sources": [
+		"../../scss/layouts/404.scss"
+	],
+	"mappings": "AAAA,AAAA,WAAW,CAAC;EACX,iBAAiB,EAAE,SAAU;EAC7B,eAAe,EAAE,KAAM;EACvB,mBAAmB,EAAE,aAAc,GACnC",
+	"names": []
+}
