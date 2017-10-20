@@ -54,6 +54,7 @@
 	font-weight: 600;
 	border: none;
 	text-decoration: none;
+	white-space: nowrap;
 
 	&:hover {
 		@include animate (background);
@@ -308,77 +309,8 @@
 
 	.right {
 
-		@include media('>=phone') {
-			margin: 0 -10px;
-		}
-
 		@include media('>=tablet') {
-			margin: 0 -20px;
-			min-width: calc(75% + 20px);
-		}
-
-		.post {
-			background: $white;
-			position: relative;
-			overflow: hidden;
-			margin: 0 auto 30px;
-			margin-left: -4px;
-			overflow: hidden;
-			
-
-			@include media('>=phone') {
-				display: inline-block;
-				width: 50%;
-				padding: 0 10px;
-
-			}
-
-			@include media('>=tablet') {
-				padding: 0 20px;
-			}
-
-			@include media('>=desktop') {
-				width: 33.3%;
-			}
-
-			.img-holder {
-				max-width: 275px;
-				margin: 0 auto;
-			}
-
-			.text {
-				border-bottom: 5px solid $black;
-				height: 100%;
-				padding: 15px 15px 50px 15px;
-			}
-
-			.btn {
-				display: block;
-				text-align: center;
-				transform: translateY(0);
-				position: absolute;
-				left: 0;
-				right: 0;
-
-				@include media('>=phone') {
-					margin: 0 10px;
-				}
-
-				@include media('>=tablet') {
-					margin: 0 20px;
-				}
-
-
-				&:hover {
-					background: $bg-green;
-				}
-			}
-
-			&:hover .btn {
-				@extend %transition;
-
-				transform: translateY(-100%);
-			}
+			float: right;
 		}
 	}
 }
@@ -387,7 +319,6 @@
 	padding: 30px 0;
 
 	.left {
-		
 
 		@include media('>=tablet') {
 			width: 100%;
@@ -464,4 +395,237 @@
 			}
 		}
 	}
+}
+
+section {
+	@extend %clearfix;
+	background-color: $bg-section;
+	padding-top: 77px;
+
+	#sidebar {
+		width: 100%;
+		margin-bottom: 50px;
+
+		@include media('>=tablet') {
+			width: calc(25% - 50px);
+			float: left;
+			margin-right: 50px;
+		}
+
+		.form-group {
+			margin-bottom: 30px;
+			font-size: $font-size-large;
+
+			label {
+				display: inline-block;
+				margin-bottom: 10px;
+				text-transform: uppercase;
+				font-weight: 600;
+				font-size: $font-size-large;
+			}
+
+			.checkbox {
+				label,
+				input[type="checkbox"] + label,
+				input[type="checkbox"] + label::before {
+					display: inline-block;
+					vertical-align: inherit;
+					cursor: pointer;
+				}
+
+				input[type="checkbox"] + label::before {
+					content: "";
+					display: inline-block;
+					height: 19px;
+					width: 19px;
+					border-radius: 50%;
+					margin: 0 12px 0 0;
+					border: 3px solid $black;
+					background-repeat: no-repeat;
+				}
+
+				input[type="checkbox"]:checked + label::before {
+					background: $black;
+				}
+
+				input[type="checkbox"]:not(checked) + label::before {
+					background: transparent;
+				}
+			}
+
+			&.filtering-search {
+
+				.input-group {
+					position: relative;
+
+					.btn-search {
+						position: absolute;
+						height: 38px;
+						width: 38px;
+						top: 1px;
+						right: 1px;
+						border: 1px solid transparent;
+						outline: none;
+						background: $base-background-color;
+						line-height: 38px;
+					}
+
+					input {
+						width: 100%;
+						border: 1px solid transparent;
+						outline: none;
+						line-height: 38px;
+						padding: 0 43px 0 12px;
+						color: $base-text-color;
+
+						&:focus {
+							border-color: darken( $bg-section, 10% )
+						}
+					}
+				}
+			}
+
+			&.filter-type {
+
+				.input-group {
+					margin-top: 19px;
+
+					.checkbox {
+
+						label {
+							text-transform: none;
+						}
+
+						input[type="checkbox"] + label::before {
+							width: 15px;
+							height: 15px;
+							border: 2px solid $black;
+							border-radius: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	#content {
+		width: 100%;
+
+		@include media('>=tablet') {
+			float: right;
+			width: 75%;
+		}
+
+		.paging {
+			display: block;
+			text-align: center;
+			padding: 42px 0 106px;
+
+			ul {
+				@extend %listreset;
+				
+				li {
+					display: inline-block;
+					padding: 0 1px;
+
+					a {
+						@include animate (color background);
+
+						display: block;
+						width: 32px;
+						height: 32px;
+						font-size: $font-size-large;
+						color: $base-text-color;
+						background: transparent;
+						text-decoration: none;
+						line-height: 32px;
+						font-weight: 600;
+
+						&:hover {
+							color: $yellow;
+							background: $black;
+						}
+
+						&.active {
+							color: $yellow;
+							background: $black;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.top-section {
+	background: $base-background-color;
+	margin-left: -9999px;
+	margin-right: -9999px;
+	padding-left:  9999px;
+	padding-right:  9999px;
+}
+
+.main-section {
+	background: $bg-section;
+	margin-left: -9999px;
+	margin-right: -9999px;
+	padding-left:  9999px;
+	padding-right:  9999px;
+}
+
+.post.man {
+	background: $white;
+	position: relative;
+	overflow: hidden;
+	margin: 0 auto 30px;
+	overflow: hidden;
+	max-width: 275px;
+	// max-height: 402px;
+	max-height: 440px;
+
+	.title {
+		font-size: 24px;
+		line-height: 28px;
+		font-weight: 600;
+	}
+
+	.text {
+		display: block;
+		padding: 15px 15px 30px 15px;
+		margin-bottom: 50px;
+	}
+
+	.btn {
+		display: block;
+		text-align: center;
+		transform: translateY(0);
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: -53px;
+		margin-bottom: 0;
+		z-index: 1;
+		cursor: default;
+	}
+
+	&:hover .btn {
+		@extend %transition;
+
+		transform: translateY(-100%);
+	}
+
+	&:after {
+		content: "";
+		height: 5px;
+		width: 100%;
+		background: $black;
+		position: absolute;
+		bottom: 0;
+	}
+}
+
+.one-height {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
 }

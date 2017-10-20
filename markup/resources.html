@@ -35,9 +35,19 @@
 			</nav>
 			<a href="#" class="opener"><span>Menu</span></a>
 		</header>
-		<main id="main" role="main" class="filter-page">
+		<main id="main" role="main">
 			<div class="container">
-				<section class="main-section">
+				<section class="top-section resources">
+					<div class="left">
+						<h4>PAGE TITLE (RESOURCES)</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea</p>
+					</div>
+					<div class="right">
+						<h2>Resources are so great. Lorem ipsum doloar al sigmet condpicing elit.</h2>
+						<p>Introduction text for a user visiting this page. What is listed below? What would you like them to do with it? This is like a descriptive text area to explain why this page is  important to the Advancent Project and what it should mean to the user. </p>
+					</div>
+				</section>
+				<section class="main-section resources">
 					<aside id="sidebar">
 						<form class="filter-form" role="search">
 							<div class="form-group filtering-search">
@@ -58,7 +68,48 @@
 									</select>
 								</div>
 							</div>
-							<div class="form-group">
+							<div class="form-group filter-type">
+								<label>filter by type</label>
+								<div class="input-group">
+									<div class="checkbox">
+										<input id="election" type="checkbox" hidden checked="checked"/>
+										<label for="election">2016 Election</label>
+									</div>
+									<div class="checkbox">
+										<input id="court" type="checkbox" hidden checked="checked"/>
+										<label for="court">Court Cases</label>
+									</div>
+									<div class="checkbox">
+										<input id="legal" type="checkbox" hidden/>
+										<label for="legal">Legal Memos &amp; Litigation</label>
+									</div>
+									<div class="checkbox">
+										<input id="media" type="checkbox" hidden/>
+										<label for="media">Media</label>
+									</div>
+									<div class="checkbox">
+										<input id="reports" type="checkbox" hidden checked="checked"/>
+										<label for="reports">Reports</label>
+									</div>
+									<div class="checkbox">
+										<input id="testimony" type="checkbox" hidden checked="checked"/>
+										<label for="testimony">Testimony</label>
+									</div>
+									<div class="checkbox">
+										<input id="tools" type="checkbox" hidden/>
+										<label for="tools">Tools &amp; Resources</label>
+									</div>
+									<div class="checkbox">
+										<input id="video" type="checkbox" hidden/>
+										<label for="video">Video</label>
+									</div>
+									<div class="checkbox">
+										<input id="other" type="checkbox" hidden/>
+										<label for="other">Other</label>
+									</div>
+								</div>
+							</div>
+							<div class="form-group sort">
 								<label>SORT BY</label>
 								<div class="input-group">
 									<div class="checkbox">
@@ -74,71 +125,79 @@
 							<a href="#" class="green">filter results</a>
 						</form>
 					</aside>
-					<div id="content">
-						<h2>You searched for <q><span class="goal">Lorem Ipsum</span></q></h2>
-						<span class="showing">Showing <span class="count">45</span> results</span>
-						<article class="post">
-							<div class="photo"></div>
-							<div class="content">
-								<h3>Lorem Ipsum Doloar Al Sigmet Voter Registration</h3>
-								<p>Washington &ndash; Following a weekend of racism on full display in Charlottesville and a terrorist attack that claimed a life, we released the following statement...</p>
+					<div id="content" class="one-height">
+						<div class="post man">
+							<div class="img-holder"><img src="images/img04.jpg" alt="image description"></div>
+							<div class="text">
+								<span class="title">Resources 1</span>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore eteratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum.</p>
 							</div>
-						</article>
-						<article class="post">
-							<div class="photo">
-								<div class="img-holder" style="background-image: url(images/img02.jpg);"></div>
+							<a href="#" class="btn green">learn more</a>
+						</div>
+						<div class="post man">
+							<div class="img-holder"><img src="images/img05.jpg" alt="image description"></div>
+							<div class="text">
+								<span class="title">Rights Restoration</span>
+								<p>Stopping the schoolhouse to jailhouse track promises to be a first step towards offering every child the opportunity to succeed in school and beyond.</p>
 							</div>
-							<div class="content">
-								<h3>Statement from Advancement Project on Pence-Kobach Commission Meeting</h3>
-								<span class="date">July 20, 2017</span>
-								<p>Washington &ndash; Today, the Pence-Kobach Commission, known as the “Election Integrity Commission,” officially met in person for the first time. In response, we released the following statement...</p>
+							<a href="#" class="btn green">learn more</a>
+						</div>
+						<div class="post man">
+							<div class="img-holder"></div>
+							<div class="text">
+								<span class="title">Right to Vote</span>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore eteratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum.</p>
 							</div>
-						</article>
-						<article class="post">
-							<div class="photo"></div>
-							<div class="content">
-								<h3>Shelby v. Holder Ruling Continues to Undermine Voters of Color, Underscores Need for Right to Vote Lorem Ipsum</h3>
-								<p>Washington &ndash;  We released the following statement on the fourth anniversary of the Shelby v. Holder Supreme Court ruling, which gutted key provisions of the Voting Rights Act...</p>
+							<a href="#" class="btn green">learn more</a>
+						</div>
+						<div class="post man">
+							<div class="img-holder"></div>
+							<div class="text">
+								<span class="title">School to Prison Pipeline</span>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore eteratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum.</p>
 							</div>
-						</article>
-						<article class="post">
-							<div class="photo">
-								<div class="img-holder" style="background-image: url(images/img01.jpg);"></div>
+							<a href="#" class="btn green">learn more</a>
+						</div>
+						<div class="post man">
+							<div class="img-holder"><img src="images/img06.jpg" alt="image description"></div>
+							<div class="text">
+								<span class="title">Education Justice</span>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore eteratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum.</p>
 							</div>
-							<div class="content">
-								<h3>Statement on White Extremist Rally and Terrorist Attack</h3>
-								<span class="date">August 12, 2017</span>
-								<p>Washington &ndash; Following a weekend of racism on full display in Charlottesville and a terrorist attack that claimed a life, we released the following statement...</p>
+							<a href="#" class="btn green">learn more</a>
+						</div>
+						<div class="post man">
+							<div class="img-holder"><img src="images/img05.jpg" alt="image description"></div>
+							<div class="text">
+								<span class="title">Criminalization Of</span>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, se.LLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore eteratione voluptatem sequi ipsum.</p>
 							</div>
-						</article>
-						<article class="post">
-							<div class="photo">
-								<div class="img-holder" style="background-image: url(images/img02.jpg);"></div>
+							<a href="#" class="btn green">learn more</a>
+						</div>
+						<div class="post man">
+							<div class="img-holder"></div>
+							<div class="text">
+								<span class="title">Resource 7</span>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore eteratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum.</p>
 							</div>
-							<div class="content">
-								<h3>Statement from Advancement Project on Pence-Kobach Commission Meeting</h3>
-								<span class="date">July 20, 2017</span>
-								<p>Washington &ndash; Today, the Pence-Kobach Commission, known as the “Election Integrity Commission,” officially met in person for the first time. In response, we released the following statement...</p>
+							<a href="#" class="btn green">learn more</a>
+						</div>
+						<div class="post man">
+							<div class="img-holder"></div>
+							<div class="text">
+								<span class="title">Rights Restoration</span>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore eteratione voluptatem sequi nesciunt.</p>
 							</div>
-						</article>
-						<article class="post">
-							<div class="photo"></div>
-							<div class="content">
-								<h3>Shelby v. Holder Ruling Continues to Undermine Voters of Color, Underscores Need for Right to Vote</h3>
-								<span class="date">June 26, 2017</span>
-								<p>Washington &ndash;  We released the following statement on the fourth anniversary of the Shelby v. Holder Supreme Court ruling, which gutted key provisions of the Voting Rights Act...</p>
+							<a href="#" class="btn green">learn more</a>
+						</div>
+						<div class="post man">
+							<div class="img-holder"></div>
+							<div class="text">
+								<span class="title">Right to Vote</span>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore eteratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum.</p>
 							</div>
-						</article>
-						<article class="post">
-							<div class="photo">
-								<div class="img-holder" style="background-image: url(images/img01.jpg);"></div>
-							</div>
-							<div class="content">
-								<h3>Statement on White Extremist Rally and Terrorist Attack</h3>
-								<span class="date">August 12, 2017</span>
-								<p>Washington &ndash; Following a weekend of racism on full display in Charlottesville and a terrorist attack that claimed a life, we released the following statement...</p>
-							</div>
-						</article>
+							<a href="#" class="btn green">learn more</a>
+						</div>
 						<div class="paging">
 							<ul>
 								<li><a href="#" class="active">1</a></li>
