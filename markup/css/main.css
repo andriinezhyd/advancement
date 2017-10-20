@@ -1295,8 +1295,7 @@ input[type='submit'] {
         text-transform: uppercase;
         font-size: 20px;
         font-weight: 600;
-        margin-bottom: 20px;
-        white-space: nowrap; }
+        margin-bottom: 20px; }
         #footer .nav-footer .item .title:hover {
           text-decoration: none; }
       #footer .nav-footer .item a {
@@ -2129,9 +2128,10 @@ body > .jcf-select-drop.jcf-drop-flipped {
         font-weight: 600; }
       .filter-page #content .post p {
         margin-top: 12px; }
-      .filter-page #content .post .content {
-        width: 66%;
-        float: left; }
+      @media (min-width: 768px) {
+        .filter-page #content .post .content {
+          width: 66%;
+          float: left; } }
       @media (min-width: 768px) {
         .filter-page #content .post .photo {
           float: right;

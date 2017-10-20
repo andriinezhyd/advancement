@@ -134,8 +134,10 @@
 
 			.content {
 				// overflow: hidden;
-				width: 66%;
-				float: left;
+				@include media('>=tablet') {
+					width: 66%;
+					float: left;
+				}
 
 			}
 
