@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Filter Results</title>
+	<link href="https://fonts.googleapis.com/css?family=Libre+Franklin:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+	<link media="all" rel="stylesheet" href="css/main.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" defer></script>
+	<script>window.jQuery || document.write('<script src="js/jquery-1.12.4.min.js" defer><\/script>')</script>
+	<script src="js/jquery.main.js" defer></script>
+</head>
+<body>
+	<div id="wrapper">
+		<header id="header">
+			<strong class="logo"><a href="#"><img src="images/logo.png" alt="advancement project"></a></strong>
+			<nav id="nav" role="navigation" class="menu slide">	
+				<div class="drop">
+					<ul class="nav">
+						<li><a href="#">about</a></li>
+						<li><a href="#">issues</a></li>
+						<li><a href="#">CAMPAIGNS</a></li>
+						<li><a href="#">resources</a></li>
+						<li><a href="#">news</a></li>
+						<ul class="social">
+							<li><a href="#"><i class="icon-twitter"><span class="hidden">twitter</span></i></a></li>
+							<li><a href="#"><i class="icon-facebook"><span class="hidden">facebook</span></i></a></li>
+							<li><a href="#"><i class="icon-youtube"><span class="hidden">youtube</span></i></a></li>
+							<li><a href="#"><i class="icon-instagram"><span class="hidden">instagram</span></i></a></li>
+						</ul>
+						<li class="search"><a href="#"><i class="icon-glass"><span class="hidden">search</span></i></a></li>
+					</ul>
+					<div class="donate-holder"><a class="green" href="#">donate</a></div>
+				</div>
+			</nav>
+			<a href="#" class="opener"><span>Menu</span></a>
+		</header>
+		<main id="main" role="main">
+			<div class="container">
+				<section class="top-section resources">
+					<div class="left">
+						<h4>PAGE TITLE (RESOURCES)</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea</p>
+					</div>
+					<div class="right">
+						<h2>Resources are so great. Lorem ipsum doloar al sigmet condpicing elit.</h2>
+						<p>Introduction text for a user visiting this page. What is listed below? What would you like them to do with it? This is like a descriptive text area to explain why this page is  important to the Advancent Project and what it should mean to the user. </p>
+					</div>
+				</section>
+				<section class="main-section resources">
+					<aside id="sidebar">
+						<form class="filter-form" role="search">
+							<div class="form-group filtering-search">
+								<label for="search">keyword search</label>
+								<div class="input-group">
+									<button type="submit" class="btn-search"><i class="icon-glass"><span class="hidden">search</span></i></button>
+									<input type="text" class="form-control" id="search" placeholder="Search">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="cetegory">filter by dropdown</label>
+								<div class="select">
+									<select id="cetegory">
+										<option>Select Category</option>
+										<option>Select 1</option>
+										<option>Select 2</option>
+										<option>Select 3</option>
+									</select>
+								</div>
+							</div>
+							<div class="form-group filter-type">
+								<label>filter by type</label>
+								<div class="input-group">
+									<div class="checkbox">
+										<input id="election" type="checkbox" hidden checked="checked"/>
+										<label for="election">2016 Election</label>
+									</div>
+									<div class="checkbox">
+										<input id="court" type="checkbox" hidden checked="checked"/>
+										<label for="court">Court Cases</label>
+									</div>
+									<div class="checkbox">
+										<input id="legal" type="checkbox" hidden/>
+										<label for="legal">Legal Memos &amp; Litigation</label>
+									</div>
+									<div class="checkbox">
+										<input id="media" type="checkbox" hidden/>
+										<label for="media">Media</label>
+									</div>
+									<div class="checkbox">
+										<input id="reports" type="checkbox" hidden checked="checked"/>
+										<label for="reports">Reports</label>
+									</div>
+									<div class="checkbox">
+										<input id="testimony" type="checkbox" hidden checked="checked"/>
+										<label for="testimony">Testimony</label>
+									</div>
+									<div class="checkbox">
+										<input id="tools" type="checkbox" hidden/>
+										<label for="tools">Tools &amp; Resources</label>
+									</div>
+									<div class="checkbox">
+										<input id="video" type="checkbox" hidden/>
+										<label for="video">Video</label>
+									</div>
+									<div class="checkbox">
+										<input id="other" type="checkbox" hidden/>
+										<label for="other">Other</label>
+									</div>
+								</div>
+							</div>
+							<div class="form-group sort">
+								<label>SORT BY</label>
+								<div class="input-group">
+									<div class="radio">
+										<input id="oldest" type="radio" hidden name="sort"/>
+										<label for="oldest">oldest</label>
+									</div>
+									<div class="radio">
+										<input id="newest" type="radio" hidden name="sort" checked="checked"/>
+										<label for="newest">newest</label>
+									</div>
+								</div>
+							</div>
+							<a href="#" class="green">filter results</a>
+						</form>
+					</aside>
+					<div id="content" class="one-height">
+						<div class="post man">
+							<div class="img-holder"><img src="images/img04.jpg" alt="image description"></div>
+							<div class="text">
+								<span class="title">Resources 1</span>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore eteratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum.</p>
+							</div>
+							<a href="#" class="btn green">learn more</a>
+						</div>
+						<div class="post man">
+							<div class="img-holder"><img src="images/img05.jpg" alt="image description"></div>
+							<div class="text">
+								<span class="title">Rights Restoration</span>
+								<p>Stopping the schoolhouse to jailhouse track promises to be a first step towards offering every child the opportunity to succeed in school and beyond.</p>
+							</div>
+							<a href="#" class="btn green">learn more</a>
+						</div>
+						<div class="post man">
+							<div class="img-holder"></div>
+							<div class="text">
+								<span class="title">Right to Vote</span>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore eteratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum.</p>
+							</div>
+							<a href="#" class="btn green">learn more</a>
+						</div>
+						<div class="post man">
+							<div class="img-holder"></div>
+							<div class="text">
+								<span class="title">School to Prison Pipeline</span>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore eteratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum.</p>
+							</div>
+							<a href="#" class="btn green">learn more</a>
+						</div>
+						<div class="post man">
+							<div class="img-holder"><img src="images/img06.jpg" alt="image description"></div>
+							<div class="text">
+								<span class="title">Education Justice</span>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore eteratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum.</p>
+							</div>
+							<a href="#" class="btn green">learn more</a>
+						</div>
+						<div class="post man">
+							<div class="img-holder"><img src="images/man01.jpg" alt="image description"></div>
+							<div class="text">
+								<span class="title">Criminalization Of</span>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, se.LLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore eteratione voluptatem sequi ipsum.</p>
+							</div>
+							<a href="#" class="btn green">learn more</a>
+						</div>
+						<div class="post man">
+							<div class="img-holder"><img src="images/img07.jpg" alt="image description"></div>
+							<div class="text">
+								<span class="title">Resource 7</span>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore eteratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum.</p>
+							</div>
+							<a href="#" class="btn green">learn more</a>
+						</div>
+						<div class="post man">
+							<div class="img-holder"><img src="images/img05.jpg" alt="image description"></div>
+							<div class="text">
+								<span class="title">Rights Restoration</span>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore eteratione voluptatem sequi nesciunt.</p>
+							</div>
+							<a href="#" class="btn green">learn more</a>
+						</div>
+						<div class="post man">
+							<div class="img-holder"></div>
+							<div class="text">
+								<span class="title">Right to Vote</span>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore eteratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum.</p>
+							</div>
+							<a href="#" class="btn green">learn more</a>
+						</div>
+						<div class="paging">
+							<ul>
+								<li><a href="#" class="active">1</a></li>
+								<li><a href="#">2</a></li>
+								<li><a href="#">3</a></li>
+								<li><a href="#">4</a></li>
+								<li><a href="#">5</a></li>
+							</ul>
+						</div>
+					</div>
+				</section>
+			</div>
+		</main>
+		<footer id="footer">
+			<div class="container">
+				<ul class="nav-footer accordion">
+					<li class="item">
+						<a href="#" class="title opener">about</a>
+						<ul class="slide about">
+							<li><a href="#">Mission</a></li>
+							<li><a href="#">Annual Report</a></li>
+							<li><a href="#">Where We Work</a></li>
+							<li><a href="#">Advancement Project Impact</a></li>
+							<li><a href="#">Staff</a></li>
+							<li><a href="#">Board of Directors</a></li>
+							<li><a href="#">Careers</a></li>
+							<li><a href="#">Contact Us</a></li>
+						</ul>
+					</li>
+					<li class="item">
+						<a href="#" class="title opener">issues</a>
+						<ul class="slide issues">
+							<li><a href="#">Voter Protection</a></li>
+							<li><a href="#">Rights Restoration</a></li>
+							<li><a href="#">Right to Vote</a></li>
+							<li><a href="#">School to Prison Pipeline</a></li>
+							<li><a href="#">Education Justice</a></li>
+							<li><a href="#">Criminalization of</a></li>
+							<li><a href="#">Immigrant Justice</a></li>
+						</ul>
+					</li>
+					<li class="item">
+						<a href="#" class="title opener">resources</a>
+						<ul class="slide resources">
+							<li><a href="#">Videos</a></li>
+							<li><a href="#">Reports</a></li>
+							<li><a href="#">Legal Memos &amp; Litigation</a></li>
+							<li><a href="#">Handouts &amp; Fact Sheets</a></li>
+							<li><a href="#">Toolkits</a></li>
+							<li><a href="#">Other</a></li>
+						</ul>
+					</li>
+					<li class="item">
+						<a href="#" class="title opener">social</a>
+						<ul class="slide social">
+							<li><a href="#">Twitter</a></li>
+							<li><a href="#">Facebook</a></li>
+							<li><a href="#">Instagram</a></li>
+							<li><a href="#">Youtube</a></li>
+						</ul>
+					</li>
+					<li class="item">
+						<a href="#" class="title opener">campaigns</a>
+						<ul class="slide campaigns">
+							<li><a class="title" href="#">news</a></li>
+							<li><a class="title" href="#">press</a></li>
+						</ul>
+					</li>
+					<li class="item last">
+						<a href="#" class="title opener">sign up for our email list</a>
+						<form action="#" class="signup-form slide">
+							<fieldset>
+								<div class="input-holder">
+									<input type="text" placeholder="Email Address" require>
+								</div>
+								<div class="zipcode input-holder">
+									<input type="text" placeholder="Zip Code">
+									<button type="submit" class="btn">Sign Up</button>
+								</div>
+							</fieldset>
+						</form>
+						<a href="#" class="title slide">support us</a>
+						<a href="#" class="green slide">donate</a>
+					</li>
+				</ul>
+				<strong class="logo"><a href="#"><img src="images/logo-footer.png" alt="Advancemet Project"></a></strong>
+				<ul class="bottom-list">
+					<li><a href="#">Ending Schoolhouse to Jailhouse Pipeline</a></li>
+					<li><a href="#">Terms of Use</a></li>
+					<li><a href="#">Privacy policy</a></li>
+				</ul>
+				<div class="copyright-info">
+					<span>&copy;2017 <a href="#">Advancement Project</a>. All Rights Reserved</span>
+				</div>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>

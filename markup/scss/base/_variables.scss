@@ -2,11 +2,12 @@
 // Color calculator - http://razorjam.github.io/sasscolourfunctioncalculator/
 // Color names - http://name-of-color.com/
 
-$gray: #999;
+$gray: #8b99a6;
 $black: #000;
 $white: #fff;
 $yellow: #ffce00;
 $green:#106d31;
+$blue: #1c94e0;
 $light-blue: #39f;
 $light-gray: #bebdbb;
 $bg-section: #f0efef;
@@ -19,6 +20,10 @@ $base-font-serif: 'Times New Roman', 'Times', 'Baskerville', 'Georgia', serif;
 $base-text-color: $black !default;
 $base-background-color: $white !default;
 $font-size-base: 16px !default;
+
+$font-size-large: ceil(($font-size-base * 1.125)) !default; // ~18px
+$font-size-small: ceil(($font-size-base * 0.75)) !default; // ~12px
+
 $line-height-base: 1.2 !default;
 $base-font-family: $base-font-sans-serif !default;
 
@@ -57,6 +62,9 @@ $animation-speed: 0.3s;
 
 $icomoon-font-path: "../fonts" !default;
 
+$icon-logout: "\e906";
+$icon-like: "\e907";
+$icon-check: "\e908";
 $icon-arrow-right: "\e900";
 $icon-instagram: "\e901";
 $icon-youtube: "\e902";

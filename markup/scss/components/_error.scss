@@ -1,0 +1,40 @@
+#page-error {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	position: relative;
+	padding-bottom: 56.25%;
+
+	&:after {
+		content: "";
+		position: absolute;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		// z-index: 1;
+		background: rgba( $black, 0.5 );
+	}
+
+	.content {
+		@include vertical-align-el;
+
+		text-align: center;
+		color: $white;
+		line-height: 30px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate( -50%, -50% );
+		z-index: 1;
+
+		h2 {
+			line-height: 1;
+		}
+
+		.btn {
+			color: $yellow;
+			background: transparent;
+		}
+	}
+}

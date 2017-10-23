@@ -31,10 +31,14 @@ $media-expressions: (
 @import 'base/forms';
 @import 'base/fonts';
 
-@import 'components/header';
-@import 'components/common';
 @import 'components/block-slider';
-@import 'components/footer';
+@import 'components/jcf';
+@import 'components/error';
+@import 'components/results';
+@import 'components/resources';
+@import 'components/issues';
+@import 'components/news';
 
-@import 'layouts/error';
-@import 'layouts/results';
+@import 'layouts/header';
+@import 'layouts/common';
+@import 'layouts/footer';
