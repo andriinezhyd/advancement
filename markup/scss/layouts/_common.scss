@@ -239,21 +239,7 @@
 
 	p {
 		margin: 20px 0;
-	}
-
-	a {
-		display: block;
-		font-weight: 600;
-		text-decoration: none;
-		text-transform: uppercase;
-		color: $base-text-color;
-		margin-bottom: 30px;
-
-		i {
-			margin-left: 7px;
-			line-height: 1.2;
-		}
-	}
+	}	
 
 	.green {
 		display: inline-block;
@@ -298,6 +284,23 @@
 .mission {
 	padding: 30px 0;
 
+	.left {
+
+		.more {
+			display: block;
+			font-weight: 600;
+			text-decoration: none;
+			text-transform: uppercase;
+			color: $base-text-color;
+			margin-bottom: 30px;
+
+			i {
+				margin-left: 7px;
+				line-height: 1.2;
+			}
+		}
+	}
+
 	.right {
 		font-size: 24px;
 	}
@@ -306,6 +309,23 @@
 .updates {
 	background: $bg-section;
 	padding: 30px 0;
+
+	.left {
+
+		.more {
+			display: block;
+			font-weight: 600;
+			text-decoration: none;
+			text-transform: uppercase;
+			color: $base-text-color;
+			margin-bottom: 30px;
+
+			i {
+				margin-left: 7px;
+				line-height: 1.2;
+			}
+		}
+	}
 
 	.right {
 
@@ -326,6 +346,20 @@
 
 		@include media('>=desktop') {
 			width: calc(25% - 50px);
+		}
+
+		.more {
+			display: block;
+			font-weight: 600;
+			text-decoration: none;
+			text-transform: uppercase;
+			color: $base-text-color;
+			margin-bottom: 30px;
+
+			i {
+				margin-left: 7px;
+				line-height: 1.2;
+			}
 		}
 	}
 
@@ -424,16 +458,16 @@ section {
 				font-size: $font-size-large;
 			}
 
-			.checkbox {
+			.radio {
 				label,
-				input[type="checkbox"] + label,
-				input[type="checkbox"] + label::before {
+				input[type="radio"] + label,
+				input[type="radio"] + label::before {
 					display: inline-block;
 					vertical-align: inherit;
 					cursor: pointer;
 				}
 
-				input[type="checkbox"] + label::before {
+				input[type="radio"] + label::before {
 					content: "";
 					display: inline-block;
 					height: 19px;
@@ -444,11 +478,11 @@ section {
 					background-repeat: no-repeat;
 				}
 
-				input[type="checkbox"]:checked + label::before {
+				input[type="radio"]:checked + label::before {
 					background: $black;
 				}
 
-				input[type="checkbox"]:not(checked) + label::before {
+				input[type="radio"]:not(checked) + label::before {
 					background: transparent;
 				}
 			}
@@ -491,19 +525,58 @@ section {
 					margin-top: 19px;
 
 					.checkbox {
-
-						label {
+						label,
+						input[type="checkbox"] + label,
+						input[type="checkbox"] + label::before {
+							display: inline-block;
+							vertical-align: inherit;
+							cursor: pointer;
 							text-transform: none;
 						}
 
 						input[type="checkbox"] + label::before {
-							width: 15px;
+							content: "";
+							display: inline-block;
 							height: 15px;
-							border: 2px solid $black;
+							width: 15px;
 							border-radius: 0;
+							margin: 0 12px 0 0;
+							border: 2px solid $black;
+							background-repeat: no-repeat;
+						}
+
+						input[type="checkbox"]:checked + label::before {
+							background: $black;
+						}
+
+						input[type="checkbox"]:not(checked) + label::before {
+							background: transparent;
 						}
 					}
 				}
+			}
+		}
+
+		.green {
+			display: inline-block;
+			vertical-align: top;
+			margin-bottom: 45px;
+		}
+
+		.banner {
+			width: 250px;
+			height: 250px;
+			background: #acabab;
+			margin-bottom: 35px;
+			position: relative;
+
+			.text {
+				font-size: $font-size-large;
+				color: $white;
+				position: absolute;
+				top: 50%;
+				left: 25%;
+				transform: translateY(-50%);
 			}
 		}
 	}
@@ -518,8 +591,10 @@ section {
 
 		.paging {
 			display: block;
+			width: 100%;
 			text-align: center;
 			padding: 42px 0 106px;
+			margin: 0 auto;
 
 			ul {
 				@extend %listreset;
@@ -580,8 +655,15 @@ section {
 	margin: 0 auto 30px;
 	overflow: hidden;
 	max-width: 275px;
-	// max-height: 402px;
 	max-height: 440px;
+
+	.img-holder {
+		min-height: 190px;
+
+		img {
+			width: 100%;
+		}
+	}
 
 	.title {
 		font-size: 24px;
@@ -629,3 +711,4 @@ section {
 	flex-flow: row wrap;
 	justify-content: space-between;
 }
+
